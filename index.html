@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="csrf-token" content="YeNmB5oKwnL9VQsuIEOU1l5KUXCBLQwTzPSG04TX">
+
+<!-- Favicon -->
+<link href="https://growmore.community/front/assets/images/favicon.png rel="icon" type="image/png">
+
+<!-- title and description-->
+<title>Growmore Community Forum | Growmore Immigration</title>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://growmore.community/front/assets/images/GM_Favicon.png">
+<meta name="description" content="Growmore Community Forum | Growmore Immigration">
+<!-- css files -->
+<link rel="stylesheet" href="https://growmore.community/front/assets/css/tailwind.css">
+<link rel="stylesheet" href="https://growmore.community/front/assets/css/style.css">  
+
+<!-- google font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+<style>
+    .username-limit{
+        overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+    .error{
+        color: red;
+    }
+    /* .grecaptcha-badge { visibility: hidden; } */
+    .cursor-pointer{
+        cursor: pointer;
+    }
+</style><style>
+    @media only screen and (min-width: 1024px) {
+        .video_section .flex-1 {
+            max-width: 750px;
+        }
+    }
+</style>
+</head>
+<body>
+ 
+    <div id="wrapper">
+
+        <!-- header -->
+        <header class="z-[100] h-[--m-top] fixed top-0 left-0 w-full flex items-center bg-white/80 sky-50 backdrop-blur-xl border-b border-slate-200 dark:bg-dark2 dark:border-slate-800">
+
+    <div class="flex items-center w-full xl:px-6 px-2 max-lg:gap-10">
+
+        <div class="2xl:w-[--w-side] lg:w-[--w-side-sm]">
+
+            <!-- left -->
+            <div class="flex items-center gap-1"> 
+
+                <!-- icon menu -->
+                <button uk-toggle="target: #site__sidebar ; cls :!-translate-x-0"
+                        class="flex items-center justify-center w-8 h-8 text-xl rounded-full hover:bg-gray-100 xl:hidden dark:hover:bg-slate-600 group"> 
+                        <ion-icon name="menu-outline" class="text-2xl group-aria-expanded:hidden"></ion-icon>
+                        <ion-icon name="close-outline" class="hidden text-2xl group-aria-expanded:block"></ion-icon>
+                </button>
+                <div id="logo">
+                    <a href="#"> 
+                        <img src="https://growmore.community/front/assets/images/new-logo.svg" alt="" class="logo_img"></a>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="flex-1 relative">
+
+            <div class="max-w-[1220px] mx-auto flex items-center">
+                
+                <!-- search -->
+                
+                <!-- search dropdown-->
+                <div class="hidden uk- open z-10"
+                        uk-drop="pos: bottom-center ; animation: uk-animation-slide-bottom-small;mode:click ">
+                    
+                        <div class="xl:w-[694px] sm:w-96 bg-white dark:bg-dark3 w-screen p-2 rounded-lg shadow-lg -mt-14 pt-14">
+                            <div class="flex justify-between px-2 py-2.5 text-sm font-medium"> 
+                                <div class=" text-black dark:text-white">Recent</div>
+                                <button type="button" class="text-blue-500">Clear</button>
+                            </div>
+                            <nav class="text-sm font-medium text-black dark:text-white">
+                                <a href="#" class=" relative px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <img src="https://growmore.community/front/assets/images/avatars/avatar-2.jpg" class="w-9 h-9 rounded-full"> <div>   <div> Jesse Steeve </div>  <div class="text-xs text-blue-500 font-medium mt-0.5">  Friend </div>   </div> <ion-icon name="close" class="text-base absolute right-3 top-1/2 -translate-y-1/2 "></ion-icon>  </a>  
+                                <a href="#" class=" relative px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <img src="https://growmore.community/front/assets/images/avatars/avatar-2.jpg" class="w-9 h-9 rounded-full"> <div>   <div>  Martin Gray </div>  <div class="text-xs text-blue-500 font-medium mt-0.5">  Friend </div>   </div> <ion-icon name="close" class="text-base absolute right-3 top-1/2 -translate-y-1/2 "></ion-icon>  </a>  
+                                <a href="#" class=" relative px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <img src="https://growmore.community/front/assets/images/group/group-2.jpg" class="w-9 h-9 rounded-full"> <div>   <div>  Delicious Foods  </div>  <div class="text-xs text-rose-500 font-medium mt-0.5">  Group </div>   </div> <ion-icon name="close" class="text-base absolute right-3 top-1/2 -translate-y-1/2 "></ion-icon>  </a>  
+                                <a href="#" class=" relative px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <img src="https://growmore.community/front/assets/images/group/group-1.jpg" class="w-9 h-9 rounded-full"> <div>   <div> Delicious Foods  </div>  <div class="text-xs text-yellow-500 font-medium mt-0.5">  Page </div>   </div> <ion-icon name="close" class="text-base absolute right-3 top-1/2 -translate-y-1/2 "></ion-icon>  </a>  
+                                <a href="#" class=" relative px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <img src="https://growmore.community/front/assets/images/avatars/avatar-6.jpg" class="w-9 h-9 rounded-full"> <div>   <div>  John Welim </div>  <div class="text-xs text-blue-500 font-medium mt-0.5">  Friend </div>   </div> <ion-icon name="close" class="text-base absolute right-3 top-1/2 -translate-y-1/2 "></ion-icon>  </a>  
+                                <a href="#" class="hidden relative  px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <ion-icon class="text-2xl" name="search-outline"></ion-icon>  Creative ideas about Business  </a>  
+                                <a href="#" class="hidden relative  px-3 py-1.5 flex items-center gap-4 hover:bg-secondery rounded-lg dark:hover:bg-white/10"> <ion-icon class="text-2xl" name="search-outline"></ion-icon>  8 Facts About Writting  </a>  
+                            </nav>
+                            <hr class="-mx-2 mt-2 hidden">
+                            <div class="flex justify-end pr-2 text-sm font-medium text-red-500 hidden"> 
+                                <a href="#" class="flex hover:bg-red-50 dark:hover:bg-slate-700 p-1.5 rounded"> <ion-icon name="trash" class="mr-2 text-lg"></ion-icon> Clear your history</a> 
+                            </div>
+                        </div>
+                        
+                </div>
+
+                <!-- header icons -->
+                
+
+                <div class="flex items-center sm:gap-4 gap-2 absolute right-5 top-1/2 -translate-y-1/2 text-black">
+                    
+                    
+                   
+                    
+                                        <a href="#" class="flex ">
+                        <img src="https://growmore.community/front/assets/images/sidebar/Login.svg" alt="messages" class="w-6 mr-2">
+                        <span> Login </span> 
+                    </a>
+                                    </div>
+            </div> 
+
+        </div>
+
+    </div>
+
+</header>        <!--end header -->
+    
+        <!-- sidebar -->
+        <div id="site__sidebar"
+    class="fixed top-0 left-0 z-[99] pt-[--m-top] overflow-hidden transition-transform xl:duration-500 max-xl:w-full max-xl:-translate-x-full">
+
+    <!-- sidebar inner -->
+    <div
+        class="p-2 max-xl:bg-white shadow-sm 2xl:w-72 sm:w-64 w-[80%] h-[calc(100vh-64px)] relative z-30 max-lg:border-r dark:max-xl:!bg-slate-700 dark:border-slate-700">
+
+        <div class="pr-4" data-simplebar>
+
+            <nav id="side">
+
+                <ul>
+                    <li class=" mb-1">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/Home.svg" alt="feeds" class="w-6">
+                            <span> Home </span>
+                        </a>
+                    </li>
+                    
+                    <li class="">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/Login.svg" alt="messages" class="w-6">
+                            <span> Login </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/Register.svg" alt="pages" class="w-6">
+                            <span> Register </span>
+                        </a>
+                    </li>
+                                                            
+                    <li class=" mb-1">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/Articles.svg" alt="messages"
+                                class="w-6">
+                            <span>Latest News</span>
+                        </a>
+                    </li>
+                    <li class=" mb-1">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/Blogs.svg" alt="messages" class="w-6">
+                            <span>Blogs</span>
+                        </a>
+                    </li>
+                    <li class=" mb-1">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/Calculator.svg" alt="messages"
+                                class="w-6">
+                            <span> Points Calculator </span>
+                        </a>
+                    </li>
+                    <li class=" mb-1">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/sidebar/VisaCategory.svg" alt="messages"
+                                class="w-6">
+                            <span> Visa Categories </span>
+                        </a>
+                    </li>
+                    <li class="active mb-1 border-t">
+                        <a href="#">
+                            <img src="https://growmore.community/front/assets/images/icons/video.png" alt=""
+                                class="w-6 rounded-full object-cover">
+                                
+                            <span>Community Videos</span>
+                        </a>
+                    </li>
+                    <li class=" mb-1">
+                        <a href="#">
+                            <img src="https://static.vecteezy.com/system/resources/previews/006/662/139/original/artificial-intelligence-ai-processor-chip-icon-symbol-for-graphic-design-logo-web-site-social-media-mobile-app-ui-illustration-free-vector.jpg" alt="messages"
+                                class="w-6">
+                            <span>Chat with AI</span>
+                        </a>
+                    </li>
+                    <li class=" mb-1">
+                        <a href="#">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="11" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.7)" />
+                                <polygon points="10,8 16,12 10,16" fill="white" />
+                            </svg>
+
+                            <span>Live Sessions</span>
+                        </a>
+                    </li>
+                                        
+                </ul>
+
+                <!-- <button type="button" class="flex items-center gap-4 py-2 px-4 w-full font-medium text-sm text-black dark:text-white" uk-toggle="target: #show__more; cls: !hidden uk-animation-fade">
+                    <svg class="bg-gray-200 rounded-full w-6 h-6 dark:bg-slate-700" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span id="show__more"> See More </span>
+                    <span class="!hidden" id="show__more"> See Less </span>
+                </button> -->
+
+            </nav>
+
+            
+
+            <div class="font-medium text-sm text-black border-t pt-3 mt-2 dark:text-white dark:border-slate-800">
+                <div class="px-3 pb-2 text-sm font-medium">
+                    <div class="text-black dark:text-white">Coming Soon</div>
+                </div>
+        
+                <a href="#">
+                    <div class="flex items-center gap-2 p-3 px-4 rounded-xl hover:bg-secondery">
+                        <img src="https://growmore.community/front/assets/images/icons/group.png" alt=""
+                            class="w-6 rounded-full object-cover">
+                        <div> ANZSCO Occupation</div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="flex items-center gap-2 p-3 px-4 rounded-xl hover:bg-secondery">
+                        <img src="https://growmore.community/front/assets/images/icons/fund.png" alt=""
+                            class="w-6 rounded-full object-cover">
+                        <div> Offers</div>
+                    </div>
+                </a>
+            </div>
+
+            
+
+
+            <div class="text-xs font-medium flex flex-wrap gap-2 gap-y-0.5 py-2 px-4 border-t">
+                <a href="https://growmore.one/contact-us" target="_blank" class="hover:underline">Contact Us</a>
+                <a href="https://growmore.one/" class="hover:underline" target="_blank">Website</a>
+                <a href="https://growmore.community/terms-and-conditions" class="hover:underline" target="_blank">T&C</a>
+            </div>
+            <div class="text-xs font-medium flex flex-wrap gap-2 gap-y-0.5 py-2 px-4 ">
+                <a href="https://growmore.au/" class="hover:underline" target="_blank">© Growmore 2025</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- sidebar overly -->
+    <div id="site__sidebar__overly" class="absolute top-0 left-0 z-20 w-screen h-screen xl:hidden backdrop-blur-sm"
+        uk-toggle="target: #site__sidebar ; cls :!-translate-x-0">
+    </div>
+</div>
+        <!-- end sidebar -->
+        <!-- main contents -->
+        <main id="site__main" class="2xl:ml-[--w-side]  xl:ml-[--w-side-sm] p-2.5 h-[calc(100vh-var(--m-top))] mt-[--m-top]">
+
+
+
+    <div class="flex 2xl:gap-12 max-lg:flex-col gap-10 2xl:max-w-[1220px] max-w-[1065px] mx-auto video_section" id="">
+
+        <div class="flex-1">
+
+            <div class="page-heading flex justify-between space-x-4 p-4 rounded-md box items-center">
+
+                <h1 class="page-title"> Chat with AI </h1>
+                
+            </div>
+            <!-- page feautred -->
+            <div class="relative" tabindex="-1" uk-slider="finite:true">
+
+                
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6" id="onlineVideoList">
+    <div class="card rounded-xl shadow-lg overflow-hidden" style="height: 400px; width:700px; padding: 16px;">
+        
+        <!-- Heading added here -->
+        
+        <div class="card-media sm:aspect-[2/1.1] h-50 rounded-xl overflow-hidden">
+            <iframe 
+                src="https://copilotstudio.microsoft.com/environments/Default-ce4a3929-9f39-40ff-9204-cdf25885ada7/bots/cr2c5_visaGuru/webchat?__version__=2" 
+                frameborder="0" 
+                style="width: 100%; height: 100%;">
+            </iframe>
+        </div>
+
+                        
+                    </div>
+                                    </div>
+                
+                
+                            </div>
+        </div>
+
+        <!--left side start :: trending-post -->
+        <div class="2xl:w-[380px] lg:w-[330px] w-full">
+
+            <!--start trending-questions -->
+            <div class="box p-5 px-6">
+    <div>
+        <a href="#">
+            <div class="relative overflow-hidden rounded-lg">
+                <div class="relative w-full h-60">
+                    <img src="https://growmore.community/front/assets/images/Consultations_1.png" alt=""
+                        class="object-cover w-full h-full inset-0">
+                </div>
+                <div
+                    class="absolute right-0 top-1 m-2 card-overlay text-white rounded-full py-0.5 px-2 text-sm font-semibold dark:bg-slate-800/60">
+                    $109 AUD! </div>
+            </div>
+        </a>
+        <div class="mt-3 w-full text-center">
+            <p class="text-center pb-2">Become a Growmore Community Member and Get Expert Support at Special Offer</p>
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                                        <a href="#" class="text-sm rounded-full py-1.5 px-3.5 bg-primary text-white text-center">schedule session with our RMA</a>
+                <!-- Calendly link widget end -->
+            
+        </div>
+    </div>
+
+
+</div>
+<div class="box p-5 px-6">
+
+    <div class="flex items-baseline justify-between text-black dark:text-white">
+        <h3 class="font-bold text-base"> Trending posts.</h3>
+        <a href="#" class="text-sm text-blue-500">See all</a>
+    </div>
+
+    <div class="mt-4 space-y-4">
+                                    <div>
+                    <a href="#">
+                        <h4
+                            class="text-sm font-normal text-black line-clamp-1 dark:text-white duration-200 hover:opacity-80">
+                            Sir !!! Today live session time???</h4>
+                    </a>
+                    <div class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+                        <div> zahi520084</div>
+                        <div class="md:block hidden">·</div>
+                        <div> 16 H ago </div>
+                    </div>
+                </div>
+                            <div>
+                    <a href="#">
+                        <h4
+                            class="text-sm font-normal text-black line-clamp-1 dark:text-white duration-200 hover:opacity-80">
+                            Hello Sir, I am running my own tiles business as a proprietor since 2021. I mainly work in wall and floor tiling. I wanted to ask if there is any PR option available based on this work or under the Wall &amp; Floor Tiler category. Kindly guide me, thank you</h4>
+                    </a>
+                    <div class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+                        <div> jaye022611</div>
+                        <div class="md:block hidden">·</div>
+                        <div> 17 H ago </div>
+                    </div>
+                </div>
+                            <div>
+                    <a href="#">
+                        <h4
+                            class="text-sm font-normal text-black line-clamp-1 dark:text-white duration-200 hover:opacity-80">
+                            Hello mam / sir
+How are you?
+mujhe yeh puchna hai ki mere bete ko india me college mein admission karvata hun (MBBS) to kal ko uski PR pe Koi fark to nahin padega coz jo course usne Krna hai vo 5 saal ka hai 
+
+Mera concern yeh hai ki uska 494 rahega Na ? Koi aur visa to nahin Lena padega bad mein. Uski PR 3 saal baad hamare saath hi aayegi ya alag se apply Krna pdega?  Isko lekr mai thoda confuse hu pleasee ye baat btado. Coc vo hmare upr dependent h toh Hume kl ko uske lie kya ?</h4>
+                    </a>
+                    <div class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+                        <div> ansh230885</div>
+                        <div class="md:block hidden">·</div>
+                        <div> 21 H ago </div>
+                    </div>
+                </div>
+                            <div>
+                    <a href="#">
+                        <h4
+                            class="text-sm font-normal text-black line-clamp-1 dark:text-white duration-200 hover:opacity-80">
+                            Hi karnal ji. My sister finished MD in general medicine and currently working as senior resident from 1 year. She wants to move to Australia and pursue her career. What would be the best way?
+Thanks in advance.🙏🏻</h4>
+                    </a>
+                    <div class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+                        <div> saik400691</div>
+                        <div class="md:block hidden">·</div>
+                        <div> 22 H ago </div>
+                    </div>
+                </div>
+                            <div>
+                    <a href="#">
+                        <h4
+                            class="text-sm font-normal text-black line-clamp-1 dark:text-white duration-200 hover:opacity-80">
+                            Hello and good morning krunal sir
+One of the consultant is asking 31000 AUD for 482. They asking 5000 AUD for assessment and nomination ( which i have to pay first) and later after visa they are charging 26000 AUD.
+Is it legit or scam. Please guide me
+Coz as i know the visa charge for 482 is 3210 i guess.</h4>
+                    </a>
+                    <div class="text-xs text-gray-400 mt-2 flex items-center gap-2">
+                        <div> nite113261</div>
+                        <div class="md:block hidden">·</div>
+                        <div> 1 days ago </div>
+                    </div>
+                </div>
+                        </div>
+
+
+</div>
+            <!--end trending-questions -->
+
+        </div>
+        <!--end trending-questions -->
+
+    </div>
+</main>
+        <!-- main contents -->
+
+    </div>
+
+
+    <!-- open chat box -->
+    
+    <script>
+    let BASEURL = "#";
+    let isUserLoggedIn = "";
+</script>
+
+
+<!-- Javascript  -->
+<script src="https://growmore.community/front/assets/js/uikit.min.js"></script>
+<script src="https://growmore.community/front/assets/js/simplebar.js"></script>
+<script src="https://growmore.community/front/assets/js/script.js"></script>
+
+<!-- Ion icon -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+    integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.validator.addMethod("wordCount", function(value, element, params) {
+        var wordCount = value.trim().split(/\s+/).length; // Count words
+        return this.optional(element) || wordCount <= params; // Validate
+    }, "Please enter no more than {0} words.");
+
+    toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "timeOut": "3000"
+        };
+</script>
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
+
+
+
+
+<script>
+    $(document).ready(function() {
+            let singlonlineVideosPage = 2;
+            let lastonlineVideosPage = 1;
+            $('#load-more').on('click', function() {
+                loadMoreOnlineVideos();
+            });
+
+
+            function loadMoreOnlineVideos() {
+            if (singlonlineVideosPage > lastonlineVideosPage) return false;
+
+            $.ajax({
+                url: "https://growmore.community/community-videos/get-list",
+                type: 'GET',
+                data: {
+                    page: singlonlineVideosPage,
+                },
+                success: function(response) {
+                    if (response.status == false) {
+                        toastr.error('Something went wrong! please try again');
+                        return false;
+                    }
+
+                    let onlineVideosLength = Object.keys(response.onlineVideosList.onlineVideo).length;
+                    if (onlineVideosLength > 0) {
+                        let mainOnlineVideoHtml = "";
+                        $.each(response.onlineVideosList.onlineVideo, function(index, onlineVideo) {
+                            mainOnlineVideoHtml +=`<div class="card">
+                                                        <a href="`+onlineVideo.url+`">
+                                                            <div class="card-media sm:aspect-[2/1.1] h-50">
+                                                                <iframe width="100%" height="100%" src="`+onlineVideo.iframe_url+`"
+                                                                    frameborder="0"
+                                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                    allowfullscreen>
+                                                                </iframe>
+                                                            </div>
+                                                        </a>
+                                                    <div class="card-body">
+                                                            <a href="`+onlineVideo.url+`" target="_blank">
+                                                                <h4 class="card-title text-sm line-clamp-2"> `+onlineVideo.title+`</h4>
+                                                            </a>
+                                                            <p class="card-text mt-1.5"> <a
+                                                                    href="`+onlineVideo.author_url+`">`+onlineVideo.author+`</a>
+                                                            </p>
+                                                    </div>
+                                                </div>`;
+
+                            if (index === (onlineVideosLength - 1)) {
+                                if (singlonlineVideosPage == response.onlineVideosList.last_page) {
+                                    $("#load-more").addClass('hidden');
+                                } else {
+                                    singlonlineVideosPage++;
+                                }
+                                $("#onlineVideoList").append(mainOnlineVideoHtml);
+
+                            }
+                        });
+                    } else {
+                        toastr.success('No Data found!');
+                    }
+
+                },
+                error: function() {
+                    toastr.error('Something went wrong! please try again');
+
+                },
+                complete: function() {
+                    // $("#loading").addClass("hidden");
+                }
+            });
+        }
+        });
+</script>
+ 
+
+</body>
+</html>
